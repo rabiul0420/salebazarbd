@@ -1,0 +1,168 @@
+[23-Jun-2023 12:25:49 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:25:49 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:25:49 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:25:56 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:25:56 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:25:56 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:26:11 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:26:11 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:26:11 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:55 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:55 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:55 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:58 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:58 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:27:58 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:28:40 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:28:40 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:28:40 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:04 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:04 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:04 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:11 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:11 America/New_York] PHP Warning:  require(/home/salepzyj/public_html/../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:29:11 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html/../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
+[23-Jun-2023 12:30:06 America/New_York] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.1.33. in /home/salepzyj/salebazar/vendor/composer/platform_check.php on line 24
+[23-Jun-2023 12:30:39 America/New_York] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.1.33. in /home/salepzyj/salebazar/vendor/composer/platform_check.php on line 24
+[23-Jun-2023 12:30:54 America/New_York] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.2.34. in /home/salepzyj/salebazar/vendor/composer/platform_check.php on line 24
+[23-Jun-2023 12:32:44 America/New_York] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.2.34. in /home/salepzyj/salebazar/vendor/composer/platform_check.php on line 24
+[23-Jun-2023 12:36:54 America/New_York] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.2.34. in /home/salepzyj/salebazar/vendor/composer/platform_check.php on line 24
+[23-Jun-2023 16:39:23 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:40:10 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:40:29 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:40:37 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:41:09 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:42:59 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:43:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:44:20 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:44:21 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:44:40 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:44:47 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:45:02 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:46:20 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:47:02 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:47:03 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:47:28 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:48:59 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:50:43 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:51:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 16:51:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:00:56 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:01:05 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:01:49 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:01:54 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:02:17 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:02:25 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:02:28 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:03:12 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:03:15 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:03:17 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:04:20 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:04:59 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:05:27 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:07:18 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:08:54 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:09:15 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:10:21 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:14:04 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:14:18 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:14:31 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:14:58 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:15:35 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:16:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:19:27 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:47:10 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:48:36 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:48:45 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 17:49:21 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 18:10:20 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 18:13:23 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 18:13:36 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 18:37:09 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 19:13:28 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 19:16:34 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 19:17:28 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 19:22:46 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 20:01:22 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 20:01:24 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 20:25:48 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 20:32:37 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 21:19:12 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 21:22:11 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 23:07:52 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 23:09:14 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 23:09:22 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[23-Jun-2023 23:09:32 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 00:35:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:04:03 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:08:44 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:08:48 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:22:06 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:22:38 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:30:05 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:30:33 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:33:42 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 01:35:30 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:15:04 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:36 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:37 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:37 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:37 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:44 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:45 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:47 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:16:47 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:20:14 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:23:13 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:23:14 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:23:17 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:24:21 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:39:34 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:39:59 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 03:41:27 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 04:26:59 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 04:31:30 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 04:42:03 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 05:18:26 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 05:45:01 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 06:46:32 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 06:48:00 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 06:48:34 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 06:48:39 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:01:41 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:10:44 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:11:20 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:11:29 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:11:44 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:13:42 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:13:57 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:14:11 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:14:32 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:14:50 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:15:09 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:15:24 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:15:39 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:15:57 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:19:06 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:19:25 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:19:39 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:19:56 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:20:10 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:20:25 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:20:42 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:21:06 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:21:41 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:22:00 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:22:28 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:27:58 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:28:15 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:28:17 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 07:59:47 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:00:04 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:00:12 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:00:14 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:05:22 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:06:07 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 08:07:03 UTC] PHP Fatal error:  Trait 'Laravel\Passport\HasApiTokens' not found in /home/salepzyj/salebazar/app/User.php on line 11
+[24-Jun-2023 04:08:53 America/New_York] PHP Warning:  require(/home/salepzyj/public_html../../salebazar/vendor/autoload.php): failed to open stream: No such file or directory in /home/salepzyj/public_html/index.php on line 24
+[24-Jun-2023 04:08:53 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/salepzyj/public_html../../salebazar/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/salepzyj/public_html/index.php on line 24
