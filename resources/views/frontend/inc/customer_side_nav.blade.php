@@ -120,12 +120,14 @@
                     </li>
                 @endif
 
-                @if (\App\Addon::where('unique_identifier', 'affiliate_system')->first() != null && \App\Addon::where('unique_identifier', 'affiliate_system')->first()->activated && Auth::user()->affiliate_user != null && Auth::user()->affiliate_user->status)
+                @php $isaffiliate = (Auth::check())?Auth::user()->affiliate_user->status:'' @endphp
+
+                @if (\App\Addon::where('unique_identifier', 'affiliate_system')->first() != null && \App\Addon::where('unique_identifier', 'affiliate_system')->first()->activated && $isaffiliate)
                     <li>
                         <a href="{{ route('affiliate.user.index') }}" class="{{ areActiveRoutesHome(['affiliate.user.index', 'affiliate.payment_settings'])}}">
                             <i class="la la-dollar"></i>
                             <span class="category-name">
-                                {{__('Affiliate System')}} {{ Auth::user()->affiliate_user }}
+                                {{__('Affiliate System')}}
                             </span>
                         </a>
                     </li>

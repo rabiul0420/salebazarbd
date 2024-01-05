@@ -107,15 +107,15 @@ class AffiliateController extends Controller
                 $user->user_type = "customer";
                 $user->password = Hash::make($request->password);
                 $user->save();
-                
-                
+
+
                 $auser = User::find($user->id);
                 $auser->referral_code = substr($user->id.str_random(10), 0, 10);
                 $auser->save();
-                
-                
-                 
-                                       
+
+
+
+
 
                 $customer = new Customer;
                 $customer->user_id = $user->id;
@@ -163,7 +163,7 @@ class AffiliateController extends Controller
         }
         $affiliate_user->informations = json_encode($data);
         if($affiliate_user->save()){
-            flash(__('Your verification request has been submitted successfully!'))->success();
+            flash('lll','Your verification request has been submitted successfully!');
             return redirect()->route('home');
         }
 
