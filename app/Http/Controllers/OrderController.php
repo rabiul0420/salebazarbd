@@ -140,6 +140,41 @@ class OrderController extends Controller
 
         return view('sales.index', compact('orders', 'sort_search', 'payment_status', 'delivery_status'));
     }
+    
+            /**
+     * Display a listing of the sales referal to admin.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sales_refferal(Request $request)
+    {   
+        $payment_status = null;
+        $delivery_status = null;
+        $sort_search = null;
+        $orders = DB::table('orders')
+            ->orderBy('code', 'desc')
+            ->join('order_details', 'orders.id', '=', 'order_details.order_id')
+            ->where('orders.referred_by', '!=' , 0)
+            ->select('orders.id')
+            ->distinct();
+
+        if ($request->payment_type != null) {
+            $orders = $orders->where('order_details.payment_status', $request->payment_type);
+            $payment_status = $request->payment_type;
+        }
+        if ($request->delivery_status != null) {
+            $orders = $orders->where('order_details.delivery_status', $request->delivery_status);
+            $delivery_status = $request->delivery_status;
+        }
+        if ($request->has('search')) {
+            $sort_search = $request->search;
+            $orders = $orders->where('code', 'like', '%' . $sort_search . '%');
+        }
+
+        $orders = $orders->get();
+
+        return view('sales.reffered_order', compact('orders', 'sort_search', 'payment_status', 'delivery_status'));
+    }
 
 
     public function order_index(Request $request)
@@ -216,12 +251,25 @@ class OrderController extends Controller
             $order->guest_id = mt_rand(100000, 999999);
         }
         $shipp = json_encode($request->session()->get('shipping_info'));
+        
+        
+       
+
+            $product_referral_code = \Illuminate\Support\Facades\Session::get('product_referral_code');
+            
+            if($product_referral_code){
+                $refferred_by = User::where('referral_code',$product_referral_code)->value('id');
+                 $order->referred_by = $refferred_by;
+            }
+            
+          
 
 
         $order->shipping_address = $shipp;
 
         $order->payment_type = $request->payment_option;
         $order->delivery_viewed = '0';
+       
         $order->payment_status_viewed = '0';
         $order->code = date('Ymd-His') . rand(10, 99);
         $order->date = strtotime('now');
@@ -385,11 +433,18 @@ class OrderController extends Controller
             $order->save();
             // print_r($seller_products_ids);
             // dd($order_detail);
+            
+            $orderDetails = $order->orderDetails->first();
+            if ($orderDetails && $orderDetails->payment_status == 'paid'){
+                $paymentStatus = "Paid";   
+            }else{
+                $paymentStatus = "C O D";
+            }
             $pdf = PDF::setOptions([
                 'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                 'logOutputFile' => storage_path('logs/log.htm'),
                 'tempDir' => storage_path('logs/')
-            ])->loadView('invoices.customer_invoice', compact('order'));
+            ])->loadView('invoices.customer_invoice', compact('order', 'paymentStatus'));
             $output = $pdf->output();
             file_put_contents('invoices/' . 'Order#' . $order->code . '.pdf', $output);
 
@@ -417,11 +472,12 @@ class OrderController extends Controller
 
 
             if (Auth::user()->user_type != 'seller' && $type != 'customer') {
+            
                 $pdf = PDF::setOptions([
                     'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                     'logOutputFile' => storage_path('logs/log.htm'),
                     'tempDir' => storage_path('logs/')
-                ])->loadView('invoices.customer_invoice', compact('order'));
+                ])->loadView('invoices.customer_invoice', compact('order', 'paymentStatus'));
                 $output = $pdf->output();
                 file_put_contents('invoices/' . 'Order#' . $order->code . '.pdf', $output);
 

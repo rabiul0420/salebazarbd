@@ -107,6 +107,15 @@ class AffiliateController extends Controller
                 $user->user_type = "customer";
                 $user->password = Hash::make($request->password);
                 $user->save();
+                
+                
+                $auser = User::find($user->id);
+                $auser->referral_code = substr($user->id.str_random(10), 0, 10);
+                $auser->save();
+                
+                
+                 
+                                       
 
                 $customer = new Customer;
                 $customer->user_id = $user->id;

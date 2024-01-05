@@ -13,11 +13,19 @@ class InvoiceController extends Controller
     public function customer_invoice_download($id)
     {
         $order = Order::findOrFail($id);
+        $orderDetails = $order->orderDetails->first();
+        
+        if ($orderDetails && $orderDetails->payment_status == 'paid'){
+            $paymentStatus = "Paid";   
+        }else{
+            $paymentStatus = "C O D";
+        }
+        
         $pdf = PDF::setOptions([
                         'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                         'logOutputFile' => storage_path('logs/log.htm'),
                         'tempDir' => storage_path('logs/')
-                    ])->loadView('invoices.customer_invoice', compact('order'));
+                    ])->loadView('invoices.customer_invoice', compact('order', 'paymentStatus'));
         return $pdf->download('order-'.$order->code.'.pdf');
     }
 
@@ -25,11 +33,19 @@ class InvoiceController extends Controller
     public function seller_invoice_download($id)
     {
         $order = Order::findOrFail($id);
+        $orderDetails = $order->orderDetails->first();
+        
+        if ($orderDetails && $orderDetails->payment_status == 'paid'){
+            $paymentStatus = "Paid";   
+        }else{
+            $paymentStatus = "C O D";
+        }
+                                
         $pdf = PDF::setOptions([
                         'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                         'logOutputFile' => storage_path('logs/log.htm'),
                         'tempDir' => storage_path('logs/')
-                    ])->loadView('invoices.seller_invoice', compact('order'));
+                    ])->loadView('invoices.seller_invoice', compact('order', 'paymentStatus'));
         return $pdf->download('order-'.$order->code.'.pdf');
     }
 
@@ -37,11 +53,19 @@ class InvoiceController extends Controller
     public function admin_invoice_download($id)
     {
         $order = Order::findOrFail($id);
+        $orderDetails = $order->orderDetails->first();
+        
+        if ($orderDetails && $orderDetails->payment_status == 'paid'){
+            $paymentStatus = "Paid";   
+        }else{
+            $paymentStatus = "C O D";
+        }
+        
         $pdf = PDF::setOptions([
                         'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                         'logOutputFile' => storage_path('logs/log.htm'),
                         'tempDir' => storage_path('logs/')
-                    ])->loadView('invoices.admin_invoice', compact('order'));
+                    ])->loadView('invoices.admin_invoice', compact('order', 'paymentStatus'));
         return $pdf->download('order-'.$order->code.'.pdf');
     }
 }

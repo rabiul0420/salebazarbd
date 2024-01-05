@@ -17,6 +17,8 @@
                                     <form class="form-default" role="form" action="{{ route('user.register') }}" method="POST">
                                         @csrf
 
+                                        <input type="hidden" name="referred_by" value="{{ $referred_by }}">
+
                                         <div class="form-group">
                                             <div class="input-group input-group--style-1">
                                                 <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ old('name') }}" placeholder="{{ __('Name') }}" name="name">

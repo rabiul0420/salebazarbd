@@ -125,7 +125,7 @@
                         <a href="{{ route('affiliate.user.index') }}" class="{{ areActiveRoutesHome(['affiliate.user.index', 'affiliate.payment_settings'])}}">
                             <i class="la la-dollar"></i>
                             <span class="category-name">
-                                {{__('Affiliate System')}}
+                                {{__('Affiliate System')}} {{ Auth::user()->affiliate_user }}
                             </span>
                         </a>
                     </li>

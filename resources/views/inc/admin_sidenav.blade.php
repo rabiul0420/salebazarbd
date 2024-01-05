@@ -508,6 +508,9 @@
                                     <li class="{{ areActiveRoutes(['refferals.users'])}}">
                                         <a class="nav-link" href="{{route('refferals.users')}}">{{__('Refferal Users')}}</a>
                                     </li>
+                                    <li class="{{ areActiveRoutes(['sales.refferal'])}}">
+                                        <a class="nav-link" href="{{route('sales.refferal')}}">{{__('Refferal Order')}}</a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif
