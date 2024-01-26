@@ -62,7 +62,7 @@ class OrderController extends Controller
             $order = \App\Order::find($value->id);
             $order->viewed = 1;
             $order->save();
-            
+
             Notification::where('order_id', $value->id)->where('seller_id', Auth::user()->id)->update([
                 'is_read' => 1
             ]);
@@ -135,19 +135,19 @@ class OrderController extends Controller
             $sort_search = $request->search;
             $orders = $orders->where('code', 'like', '%' . $sort_search . '%');
         }
-        
+
         $orders = $orders->get();
 
         return view('sales.index', compact('orders', 'sort_search', 'payment_status', 'delivery_status'));
     }
-    
+
             /**
      * Display a listing of the sales referal to admin.
      *
      * @return \Illuminate\Http\Response
      */
     public function sales_refferal(Request $request)
-    {   
+    {
         $payment_status = null;
         $delivery_status = null;
         $sort_search = null;
@@ -251,25 +251,31 @@ class OrderController extends Controller
             $order->guest_id = mt_rand(100000, 999999);
         }
         $shipp = json_encode($request->session()->get('shipping_info'));
-        
-        
-       
+
+
+
 
             $product_referral_code = \Illuminate\Support\Facades\Session::get('product_referral_code');
-            
+
             if($product_referral_code){
                 $refferred_by = User::where('referral_code',$product_referral_code)->value('id');
                  $order->referred_by = $refferred_by;
             }
-            
-          
+
+            /*$user = User::find($refferred_by);
+
+        $user->balance += 20;
+        $user->save();*/
+
+
+
 
 
         $order->shipping_address = $shipp;
 
         $order->payment_type = $request->payment_option;
         $order->delivery_viewed = '0';
-       
+
         $order->payment_status_viewed = '0';
         $order->code = date('Ymd-His') . rand(10, 99);
         $order->date = strtotime('now');
@@ -347,7 +353,7 @@ class OrderController extends Controller
                 $order_detail->tax = $cartItem['tax'] * $cartItem['quantity'];
                 $order_detail->shipping_type = $cartItem['shipping_type'];
                 $order_detail->product_referral_code = $cartItem['product_referral_code'];
-                
+
                 // Create Notification
                 Notification::updateOrCreate(['order_id' => $order->id, 'seller_id' => $product->user_id], [
                         'order_id' => $order->id,
@@ -392,6 +398,9 @@ class OrderController extends Controller
                 $product->num_of_sale++;
                 $product->save();
             }
+
+
+
             if (Auth::check()) {
                 if (auth()->user()->user_type == 'seller') {
                     if ($request->payment_option == 'cash_on_delivery') {
@@ -406,11 +415,13 @@ class OrderController extends Controller
 
                     $order->grand_total = $subtotal + $tax + $shipping - $request->adv;
 
-                    // if($request->payment_option == 'cash_on_delivery'){
-                    //     $user = Auth::user();
-                    //     $user->balance -= $shipping;
-                    //     $user->save();
-                    // }
+
+
+                     if($request->payment_option == 'cash_on_delivery'){
+                         $user = Auth::user();
+                        $user->balance -= 20;
+                        $user->save();
+                    }
 
                 } else {
                     $order->grand_total = $subtotal + $tax + $shipping;
@@ -433,10 +444,10 @@ class OrderController extends Controller
             $order->save();
             // print_r($seller_products_ids);
             // dd($order_detail);
-            
+
             $orderDetails = $order->orderDetails->first();
             if ($orderDetails && $orderDetails->payment_status == 'paid'){
-                $paymentStatus = "Paid";   
+                $paymentStatus = "Paid";
             }else{
                 $paymentStatus = "C O D";
             }
@@ -472,7 +483,7 @@ class OrderController extends Controller
 
 
             if (Auth::user()->user_type != 'seller' && $type != 'customer') {
-            
+
                 $pdf = PDF::setOptions([
                     'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                     'logOutputFile' => storage_path('logs/log.htm'),
@@ -756,7 +767,7 @@ class OrderController extends Controller
         }
         return 0;
     }
-    
+
     /**
      * Display a listing of the sales to admin.
      *
@@ -773,45 +784,45 @@ class OrderController extends Controller
             $orders = $orders->where('code', 'like', '%' . $sort_search . '%');
         }
         $orders = $orders->get();
-        
+
         return view('sales.cancelled-orders', compact('orders', 'sort_search'));
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  Request $request
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function updateOrderStatus(Request $request)
     {
         $input = $request->all();
-        
+
         if (isset($input['status']) && isset($input['id'])) {
-            
+
             $order = Order::find($input['id']);
             if($order){
                 $order->delivery_status = $input['status'];
-                
+
                 $order->save();
-                
+
                 $order->orderDetails()->update([
-                    'delivery_status' => $input['status'],                
+                    'delivery_status' => $input['status'],
                 ]);
-           
+
                 flash('Order status updated successfully')->success();
             }else{
                 flash('Something went wrong')->error();
             }
-           
+
         } else {
             flash('Something went wrong')->error();
         }
-        
+
         return redirect(route('sales.index'));
     }
-    
+
     public function sellerCancelOrder(Request $request)
     {
         $order = Order::findOrFail($request->id);
@@ -824,8 +835,8 @@ class OrderController extends Controller
 
             return 1;
         }
-        
+
         return 0;
     }
-    
+
 }

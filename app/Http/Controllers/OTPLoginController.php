@@ -19,7 +19,7 @@ class OTPLoginController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function verification(Request $request){
-        
+
             return view('otp_systems.frontend.user_verification');
         // }
         // else {
@@ -38,7 +38,7 @@ class OTPLoginController extends Controller
     public function verify_phone(Request $request){
         $user = Auth::user();
         if ($user->verification_code == $request->verification_code) {
-            $user->email_verified_at = date('Y-m-d h:m:s');
+            //$user->email_verified_at = date('Y-m-d h:m:s');
             $user->save();
 
             flash('Your phone number has been verified successfully')->success();
@@ -76,7 +76,7 @@ class OTPLoginController extends Controller
         if (($user = User::where('phone', $request->phone)->where('verification_code', $request->code)->first()) != null) {
             if($request->password == $request->password_confirmation){
                 $user->password = Hash::make($request->password);
-                $user->email_verified_at = date('Y-m-d h:m:s');
+                //$user->email_verified_at = date('Y-m-d h:m:s');
                 $user->save();
                 event(new PasswordReset($user));
                 auth()->login($user, true);
@@ -139,36 +139,36 @@ class OTPLoginController extends Controller
     }
 
     public function sendtest(Request $request){
-        $post_url = "https://login.smsinbd.com/api/send-sms" ;  
-                  
-                $post_values = array( 
+        $post_url = "https://login.smsinbd.com/api/send-sms" ;
+
+                $post_values = array(
                 'api_token' => 'mESvXiklsEKsUPAw2lUOgYVkP4EIizxac0MUPYng',
                 'senderid' => '01777333675',
                 'contact_number' => '01912211825',
                 'message' => 'Hello world',
                 );
-                
+
                 $post_string = "";
                 foreach( $post_values as $key => $value )
                     { $post_string .= "$key=" . urlencode( $value ) . "&"; }
                    $post_string = rtrim( $post_string, "& " );
-                  
+
                 $request = curl_init($post_url);
                     curl_setopt($ch, CURLOPT_HEADER, 0);
-                    curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);  
-                    curl_setopt($request, CURLOPT_POSTFIELDS, $post_string); 
-                    curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE);  
-                    $post_response = curl_exec($request);  
-                   curl_close ($request);  
-                  
-                $responses=array();         
-                 $array =  json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $post_response), true );   
-                 
-                if($array){ 
+                    curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
+                    curl_setopt($request, CURLOPT_POSTFIELDS, $post_string);
+                    curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE);
+                    $post_response = curl_exec($request);
+                   curl_close ($request);
+
+                $responses=array();
+                 $array =  json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $post_response), true );
+
+                if($array){
                  echo $array['status'] ;
-                 
+
                  echo $array['CamID'] ;
-                 
+
                  print_r($array);
                 }
 

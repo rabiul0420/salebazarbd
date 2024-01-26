@@ -31,7 +31,7 @@ class InstallController extends Controller
     }
 
     public function step3($error = "") {
-         
+
         if($error == ""){
             return view('installation.step3');
         }else {
@@ -75,7 +75,7 @@ class InstallController extends Controller
         $user->email     = $request->admin_email;
         $user->password  = Hash::make($request->admin_password);
         $user->user_type = 'admin';
-        $user->email_verified_at = date('Y-m-d H:m:s');
+        //$user->email_verified_at = date('Y-m-d H:m:s');
         $user->save();
 
         foreach(Product::all() as $product){

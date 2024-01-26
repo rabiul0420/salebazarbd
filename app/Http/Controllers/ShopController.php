@@ -75,7 +75,7 @@ class ShopController extends Controller
                 $user->password = Hash::make($request->password);
                 $user->save();
                 if (BusinessSetting::where('type', 'email_verification')->first()->value != 1) {
-                    $user->email_verified_at = date('Y-m-d H:m:s');
+                    //$user->email_verified_at = date('Y-m-d H:m:s');
                     $user->save();
                 } else {
                     Mail::to($request->email)->send(new WelcomeMail($user));
@@ -94,7 +94,7 @@ class ShopController extends Controller
         }
 
         if (BusinessSetting::where('type', 'email_verification')->first()->value != 1) {
-            $user->email_verified_at = date('Y-m-d H:m:s');
+            //$user->email_verified_at = date('Y-m-d H:m:s');
             $user->save();
         }
 
@@ -174,7 +174,7 @@ class ShopController extends Controller
             if($request->has('meta_description')){
                 $shop->meta_description = $request->meta_description;
             }
-            
+
             if ($request->hasFile('logo')) {
                 $shop->logo = $request->logo->store('uploads/shop/logo');
             }

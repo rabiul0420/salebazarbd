@@ -75,7 +75,7 @@ class LoginController extends Controller
             $newUser                  = new User;
             $newUser->name            = $user->name;
             $newUser->email           = $user->email;
-            $newUser->email_verified_at = date('Y-m-d H:m:s');
+            //$newUser->email_verified_at = date('Y-m-d H:m:s');
             $newUser->provider_id     = $user->id;
 
             // $extension = pathinfo($user->avatar_original, PATHINFO_EXTENSION);
@@ -151,7 +151,7 @@ class LoginController extends Controller
         // dd(444);
         if(auth()->user()->user_type == 'admin' || auth()->user()->user_type == 'staff')
         {
-             
+
             return redirect()->route('admin.dashboard');
         }
         elseif(session('link') != null){
