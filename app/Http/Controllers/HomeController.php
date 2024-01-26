@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use Auth;
 use Hash;
+use App\AffiliateUser;
 use App\Category;
 use App\FlashDeal;
 use App\Brand;
@@ -49,7 +50,9 @@ class HomeController extends Controller
         if ($request->has('referral_code')) {
             Cookie::queue('referral_code', $request->referral_code, 43200);
         }
-        return view('frontend.user_registration');
+        $referral_code = $request->referral_code;
+        $referred_by = User::where('referral_code',$referral_code)->value('id');
+        return view('frontend.user_registration',compact('referred_by'));
     }
 
     public function user_registration(Request $request)
@@ -69,21 +72,25 @@ class HomeController extends Controller
             flash(__('Sorry! Password did not match.'))->error();
             return back();
         }
+
         $user = new User;
         $user->name = $request->name;
+        $user->referred_by = $request->referred_by;
         $user->phone = $request->country_code . $request->phone;
         $user->role = $request->role;
         $user->email = $request->email;
         $user->user_type = "customer";
         $user->password = Hash::make($request->password);
         $user->save();
-        
+
+
+
         $customer = new Customer;
         $customer->user_id = $user->id;
         $customer->save();
 
         if (BusinessSetting::where('type', 'email_verification')->first()->value != 1) {
-            $user->email_verified_at = date('Y-m-d H:m:s');
+            //$user->email_verified_at = date('Y-m-d H:m:s');
             $user->save();
             flash(__('Registration successfull.'))->success();
         } else {
@@ -268,11 +275,11 @@ class HomeController extends Controller
         $user->city = $request->city;
         $user->postal_code = $request->postal_code;
         // $plusSymbol = '+';
-        // if (str_contains($request->phone, '+')) { 
+        // if (str_contains($request->phone, '+')) {
         //     $plusSymbol = '';
         // }
         $user->phone = $request->phone;
-        
+
 
         if ($request->new_password != null && ($request->new_password == $request->confirm_password)) {
             $user->password = Hash::make($request->new_password);
@@ -301,7 +308,7 @@ class HomeController extends Controller
         $user->city = $request->city;
         $user->postal_code = $request->postal_code;
         // $plusSymbol = '+';
-        // if (str_contains($request->phone, '+')) { 
+        // if (str_contains($request->phone, '+')) {
         //     $plusSymbol = '';
         // }
         $user->phone = $request->phone;
@@ -391,6 +398,11 @@ class HomeController extends Controller
 
     public function product(Request $request, $slug)
     {
+
+        \Illuminate\Support\Facades\Session::put('product_referral_code', $request->product_referral_code);
+
+
+
         $detailedProduct  = Product::where('slug', $slug)->where('is_approved', 1)->first();
         if ($detailedProduct != null && $detailedProduct->published) {
             updateCartSetup();

@@ -880,5 +880,14 @@ if (! function_exists('convertPrice')) {
     }
 }
 
+function flash($type=null, $title=null, $message=null)
+{
+//
+    $flash = app('App\Http\Flash');
+
+    return $flash->message($type, $title, $message);
+}
+
+
 
 ?>

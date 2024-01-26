@@ -19,7 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property float $coupon_discount
  * @property string|null $code
  * @property int $date
- * @property int $viewed
+ * @property int $viewed  
+ * @property int $referred_by
  * @property \Illuminate\Support\Carbon $created_at
  * @property \Illuminate\Support\Carbon $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Order newModelQuery()

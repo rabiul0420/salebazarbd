@@ -384,13 +384,20 @@ class PosController extends Controller
                 }
 
                 $order->save();
+                
+                $orderDetails = $order->orderDetails->first();
+                if ($orderDetails && $orderDetails->payment_status == 'paid'){
+                    $paymentStatus = "Paid";   
+                }else{
+                    $paymentStatus = "C O D";
+                }
 
                 //stores the pdf for invoice
                 $pdf = PDF::setOptions([
                                 'isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true,
                                 'logOutputFile' => storage_path('logs/log.htm'),
                                 'tempDir' => storage_path('logs/')
-                            ])->loadView('invoices.customer_invoice', compact('order'));
+                            ])->loadView('invoices.customer_invoice', compact('order', 'paymentStatus'));
                 $output = $pdf->output();
                 file_put_contents('invoices/'.'Order#'.$order->code.'.pdf', $output);
 

@@ -1,4 +1,4 @@
- 
+
 
 <div class="header">
     <div class="bottom-navbar d-block d-lg-none" style="padding-bottom: 0px;padding-left: 15px;">
@@ -6,15 +6,15 @@
             <div class="row">
                 <div class="logo-bar-icons col-lg-12 col" style="margin: 0px">
                     <ul class="inline-links d-lg-inline-block d-flex justify-content-between">
-                        
-        <li>
-            <a class="nav-cart-box" href="/">
-                <i class="nav-box-icon fa fa-home"></i>
-                <div >Home</div>
-            </a>
-        </li>
-        <li>
-            <div style="text-align: -webkit-center;padding-top: 8px" class="">
+
+                        <li>
+                            <a class="nav-cart-box" href="/">
+                                <i class="nav-box-icon fa fa-home"></i>
+                                <div >Home</div>
+                            </a>
+                        </li>
+                        <li>
+                            <div style="text-align: -webkit-center;padding-top: 8px" class="">
                                 <!-- Navbar toggler  -->
                                 <a href="{{ route('categories.all') }}">
                                     <img class="nav-box-icon" src="{{ asset('img/cat.png')}}" style="width:20px;padding-bottom: 3px ">
@@ -23,45 +23,45 @@
                                     </div>
                                 </a>
                             </div>
-        </li>
-        <li>
-            <div class="nav-search-box">
-                                        <a href="#" class="nav-box-link" style="padding: 0px;margin-top: -2px">
-                                            <i class="la la-search la-flip-horizontal d-inline-block nav-box-icon"></i>
-                                        </a>
-                                        <div >Search</div>
+                        </li>
+                        <li>
+                            <div class="nav-search-box">
+                                <a href="#" class="nav-box-link" style="padding: 0px;margin-top: -2px">
+                                    <i class="la la-search la-flip-horizontal d-inline-block nav-box-icon"></i>
+                                </a>
+                                <div >Search</div>
 
-                                    </div>
-        </li>
+                            </div>
+                        </li>
 
-        <li>
-            <a class="nav-cart-box" href="{{ route('products')}}">
-                <img class="nav-box-icon" src="{{ asset('img/shop.png')}}" style="width:27px;padding-bottom: 3px ">
-                <div >Shop</div>
-            </a>
-        </li>
+                        <li>
+                            <a class="nav-cart-box" href="{{ route('products')}}">
+                                <img class="nav-box-icon" src="{{ asset('img/shop.png')}}" style="width:27px;padding-bottom: 3px ">
+                                <div >Shop</div>
+                            </a>
+                        </li>
 
-        
-        
-        <li>
-                <div style="text-align: -webkit-center;padding-top: 0px" class="d-block d-lg-none mobile-menu-icon-box">
+
+
+                        <li>
+                            <div style="text-align: -webkit-center;padding-top: 0px" class="d-block d-lg-none mobile-menu-icon-box">
                                 <!-- Navbar toggler  -->
                                 <a href="" onclick="sideMenuOpen(this)">
-                                   
+
                                     <img class="hamburger-icon" src="{{ asset('img/user.png')}}" style="width:26px;    height: auto;padding-bottom: 3px ">
-                              
+
                                     <div class="" style="color: #818a91;">Account</div>
                                 </a>
-                                
+
                             </div>
 
-        </li>
-   
+                        </li>
+
 
                     </ul>
                 </div>
 
-            
+
             </div>
         </div>
     </div>
@@ -121,12 +121,12 @@
 
                         @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
 
-                        <li>
-                            <a href="{{ route('shops.create') }}" class="top-bar-item">{{__('Be a Seller')}}</a>
-                        </li>
+                            <li>
+                                <a href="{{ route('shops.create') }}" class="top-bar-item">{{__('Be a Seller')}}</a>
+                            </li>
                         @endif
 
-                        
+
                         @if (\App\Addon::where('unique_identifier', 'affiliate_system')->first() != null && \App\Addon::where('unique_identifier', 'affiliate_system')->first()->activated)
                             <li>
                                 <a href="{{ route('affiliate.apply') }}" class="top-bar-item">{{__('Become an Affiliate')}}</a>
@@ -136,21 +136,21 @@
                         <li>
                             <a href="{{ route('orders.track') }}" class="top-bar-item">{{__('Track Order')}}</a>
                         </li>
-                        
+
                         @auth
-                        <li>
-                            <a href="{{ route('dashboard') }}" class="top-bar-item">{{__('My Panel')}}</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('logout') }}" class="top-bar-item">{{__('Logout')}}</a>
-                        </li>
+                            <li>
+                                <a href="{{ route('dashboard') }}" class="top-bar-item">{{__('My Panel')}}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('logout') }}" class="top-bar-item">{{__('Logout')}}</a>
+                            </li>
                         @else
-                        <li>
-                            <a href="{{ route('user.login') }}" class="top-bar-item">{{__('Login')}}</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('user.registration') }}" class="top-bar-item">{{__('Registration')}}</a>
-                        </li>
+                            <li>
+                                <a href="{{ route('user.login') }}" class="top-bar-item">{{__('Login')}}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.registration') }}" class="top-bar-item">{{__('Registration')}}</a>
+                            </li>
                         @endauth
                     </ul>
                 </div>
@@ -158,63 +158,63 @@
         </div>
     </div>
     <!-- END Top Bar -->
-    
 
-<nav class="menu d-lg-none">
-    <div id="wer" class="" onclick="sideCatClose()"></div>
 
-    <ul class="collapse">
-        <div class="side-menu-header ">
-                    <div class="side-menu-close" onclick="sideCatClose()">
-                        <i class="la la-close"></i>
-                    </div>
+    <nav class="menu d-lg-none">
+        <div id="wer" class="" onclick="sideCatClose()"></div>
 
-                    
-                    
-                        <div class="side-login px-3 pb-3">
-                            <a href="">{{__('')}}</a>
-                            <a style="font-size: 16px" href="{{ route('categories.all') }}">{{__('Categories')}}</a>
-                        </div>
+        <ul class="collapse">
+            <div class="side-menu-header ">
+                <div class="side-menu-close" onclick="sideCatClose()">
+                    <i class="la la-close"></i>
                 </div>
-        @foreach (\App\Category::all()->sortBy('sort_n')->take(11) as $key => $category)
-                                @php
-                                    $brands = array();
-                                @endphp
-       
-        <li>
-            <a  href="{{ route('products.category', $category->slug) }}">{{ __($category->name) }}</a>
-             @if(count($category->subcategories)>0)
-            <ul>
-                @foreach($category->subcategories as $data)
+
+
+
+                <div class="side-login px-3 pb-3">
+                    <a href="">{{__('')}}</a>
+                    <a style="font-size: 16px" href="{{ route('categories.all') }}">{{__('Categories')}}</a>
+                </div>
+            </div>
+            @foreach (\App\Category::all()->sortBy('sort_n')->take(11) as $key => $category)
+                @php
+                    $brands = array();
+                @endphp
+
                 <li>
-                    <a href="{{ route('products.subcategory', $data->slug) }}">{{ $data->name ?? ''}}</a>
-                    @if(count($data->subsubcategories)>0)
-                    <ul>
-                        @foreach($data->subsubcategories as $data2)
-                        <li><a href="{{ route('products.subsubcategory', $data2->slug) }}">{{$data2->name}}</a></li>
-                       @endforeach
-                    </ul>
+                    <a  href="{{ route('products.category', $category->slug) }}">{{ __($category->name) }}</a>
+                    @if(count($category->subcategories)>0)
+                        <ul>
+                            @foreach($category->subcategories as $data)
+                                <li>
+                                    <a href="{{ route('products.subcategory', $data->slug) }}">{{ $data->name ?? ''}}</a>
+                                    @if(count($data->subsubcategories)>0)
+                                        <ul>
+                                            @foreach($data->subsubcategories as $data2)
+                                                <li><a href="{{ route('products.subsubcategory', $data2->slug) }}">{{$data2->name}}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </li>
+                            @endforeach
+
+                        </ul>
                     @endif
                 </li>
-                @endforeach
-                
-            </ul>
-            @endif
-        </li>
-        @endforeach
+            @endforeach
 
-        @php
-            $generalsetting = \App\GeneralSetting::first();
-        @endphp
-        <div class="mt-4">
-            <h4 class="heading heading-xs strong-600 text-uppercase mb-2">Hotline</h4>
-            <a style="margin: 0px 35px;color: #fff"  class="btn btn-base-1 btn-icon-left">
-                {{ $generalsetting->phone }}
-            </a>
-        </div>
-        
-    </ul>
-</nav>
+            @php
+                $generalsetting = \App\GeneralSetting::first();
+            @endphp
+            <div class="mt-4">
+                <h4 class="heading heading-xs strong-600 text-uppercase mb-2">Hotline</h4>
+                <a style="margin: 0px 35px;color: #fff"  class="btn btn-base-1 btn-icon-left">
+                    {{ $generalsetting->phone }}
+                </a>
+            </div>
+
+        </ul>
+    </nav>
 
     <!-- mobile menu -->
     <div class="mobile-side-menu d-lg-none">
@@ -234,14 +234,14 @@
                                 <div class="image " style="background-image:url('{{ asset('frontend/images/user.png') }}')"></div>
                             @endif
 
-                            <div class="name">{{ Auth::user()->name }}</div>
+                            <div class="name bb">{{ Auth::user()->name }}</div>
                         </div>
                         <div class="side-login px-3 pb-3">
                             <a href="{{ route('logout') }}">{{__('Sign Out')}}</a>
                         </div>
                     @else
                         <div class="widget-profile-box px-3 py-4 d-flex align-items-center">
-                                <div class="image " style="background-image:url('{{ asset('frontend/images/icons/user-placeholder.jpg') }}')"></div>
+                            <div class="image " style="background-image:url('{{ asset('frontend/images/icons/user-placeholder.jpg') }}')"></div>
                         </div>
                         <div class="side-login px-3 pb-3">
                             <a href="{{ route('user.login') }}">{{__('Sign In')}}</a>
@@ -319,12 +319,12 @@
                         </li>
 
                         @if(\App\BusinessSetting::where('type', 'classified_product')->first()->value == 1)
-                        <li>
-                            <a href="{{ route('customer_products.index') }}">
-                                <i class="la la-diamond"></i>
-                                <span>{{__('Classified Products')}}</span>
-                            </a>
-                        </li>
+                            <li>
+                                <a href="{{ route('customer_products.index') }}">
+                                    <i class="la la-diamond"></i>
+                                    <span>{{__('Classified Products')}}</span>
+                                </a>
+                            </li>
                         @endif
 
                         @if (\App\BusinessSetting::where('type', 'wallet_system')->first()->value == 1)
@@ -344,8 +344,8 @@
                         </li>
 
                         @php
-                        $refund_request_addon = \App\Addon::where('unique_identifier', 'refund_request')->first();
-                        $club_point_addon = \App\Addon::where('unique_identifier', 'club_point')->first();
+                            $refund_request_addon = \App\Addon::where('unique_identifier', 'refund_request')->first();
+                            $club_point_addon = \App\Addon::where('unique_identifier', 'club_point')->first();
                         @endphp
                         @if ($refund_request_addon != null && $refund_request_addon->activated == 1)
                             <li>
@@ -369,6 +369,17 @@
                             </li>
                         @endif
 
+                        @if (\App\Addon::where('unique_identifier', 'affiliate_system')->first() != null && \App\Addon::where('unique_identifier', 'affiliate_system')->first()->activated && isset(Auth::user()->affiliate_user) && Auth::user()->affiliate_user != null && isset(Auth::user()->affiliate_user->status) && Auth::user()->affiliate_user->status)
+                            <li>
+                                <a href="{{ route('affiliate.user.index') }}" class="{{ areActiveRoutesHome(['affiliate.user.index', 'affiliate.payment_settings'])}}">
+                                    <i class="la la-dollar"></i>
+                                    <span class="category-name">
+                                {{__('Affiliate System bbb')}}
+                            </span>
+                                </a>
+                            </li>
+                        @endif
+
                         <li>
                             <a href="{{ route('support_ticket.index') }}" class="{{ areActiveRoutesHome(['support_ticket.index', 'support_ticket.show'])}}">
                                 <i class="la la-support"></i>
@@ -379,7 +390,7 @@
                         </li>
                         @auth
                         @else
-                         <div class="mt-4">
+                            <div class="mt-4">
                                 <h4 style="padding-left: 40px" class="heading heading-xs strong-600 text-uppercase mb-2">
                                     Be a Seller
                                 </h4>
@@ -401,19 +412,19 @@
                                     <span>{{__('Products')}}</span>
                                 </a>
                             </li>
-                            
-                                @php
-                                    $review_count = DB::table('reviews')
-                                                ->orderBy('code', 'desc')
-                                                ->join('products', 'products.id', '=', 'reviews.product_id')
-                                                ->where('products.user_id', Auth::user()->id)
-                                                ->where('reviews.viewed', 0)
-                                                ->select('reviews.id')
-                                                ->distinct()
-                                                ->count();
-                                @endphp
-                            
-                             <li>
+
+                            @php
+                                $review_count = DB::table('reviews')
+                                            ->orderBy('code', 'desc')
+                                            ->join('products', 'products.id', '=', 'reviews.product_id')
+                                            ->where('products.user_id', Auth::user()->id)
+                                            ->where('reviews.viewed', 0)
+                                            ->select('reviews.id')
+                                            ->distinct()
+                                            ->count();
+                            @endphp
+
+                            <li>
                                 <a href="{{ route('reviews.seller') }}" class="{{ areActiveRoutesHome(['reviews.seller'])}}">
                                     <i class="la la-star-o"></i>
                                     <span class="category-name">
@@ -439,17 +450,17 @@
                                     <span>{{__('Orders')}}</span>
                                 </a>
                             </li>
-                             @if ($refund_request_addon != null && $refund_request_addon->activated == 1)
-                            <li>
-                                <a href="{{ route('vendor_refund_request') }}" class="{{ areActiveRoutesHome(['vendor_refund_request'])}}">
-                                    <i class="la la-file-text"></i>
-                                    <span class="category-name">
+                            @if ($refund_request_addon != null && $refund_request_addon->activated == 1)
+                                <li>
+                                    <a href="{{ route('vendor_refund_request') }}" class="{{ areActiveRoutesHome(['vendor_refund_request'])}}">
+                                        <i class="la la-file-text"></i>
+                                        <span class="category-name">
                                         {{__('Recieved Refund Request')}}
                                     </span>
-                                </a>
-                            </li>
-                        
-                             @endif
+                                    </a>
+                                </li>
+
+                            @endif
 
                             <li>
                                 <a href="{{ route('shops.index') }}">
@@ -511,40 +522,40 @@
                                 </div>
                                 <table class="text-left mb-0 table w-75 m-auto">
                                     <tbody>
-                                        <tr>
-                                            @php
-                                                $orderDetails = \App\OrderDetail::where('seller_id', Auth::user()->id)->get();
-                                                $total = 0;
-                                                foreach ($orderDetails as $key => $orderDetail) {
-                                                    if($orderDetail->order != null && $orderDetail->order->payment_status == 'paid'){
-                                                        $total += $orderDetail->price;
-                                                    }
+                                    <tr>
+                                        @php
+                                            $orderDetails = \App\OrderDetail::where('seller_id', Auth::user()->id)->get();
+                                            $total = 0;
+                                            foreach ($orderDetails as $key => $orderDetail) {
+                                                if($orderDetail->order != null && $orderDetail->order->payment_status == 'paid'){
+                                                    $total += $orderDetail->price;
                                                 }
-                                            @endphp
-                                            <td class="p-1 text-sm">
-                                                {{__('Total earnings')}}:
-                                            </td>
-                                            <td class="p-1">
-                                                {{ single_price($total) }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            @php
-                                                $orderDetails = \App\OrderDetail::where('seller_id', Auth::user()->id)->where('created_at', '>=', date('-60d'))->where('created_at', '<=', date('-30d'))->get();
-                                                $total = 0;
-                                                foreach ($orderDetails as $key => $orderDetail) {
-                                                    if($orderDetail->order != null && $orderDetail->order->payment_status == 'paid'){
-                                                        $total += $orderDetail->price;
-                                                    }
+                                            }
+                                        @endphp
+                                        <td class="p-1 text-sm">
+                                            {{__('Total earnings')}}:
+                                        </td>
+                                        <td class="p-1">
+                                            {{ single_price($total) }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        @php
+                                            $orderDetails = \App\OrderDetail::where('seller_id', Auth::user()->id)->where('created_at', '>=', date('-60d'))->where('created_at', '<=', date('-30d'))->get();
+                                            $total = 0;
+                                            foreach ($orderDetails as $key => $orderDetail) {
+                                                if($orderDetail->order != null && $orderDetail->order->payment_status == 'paid'){
+                                                    $total += $orderDetail->price;
                                                 }
-                                            @endphp
-                                            <td class="p-1 text-sm">
-                                                {{__('Last Month earnings')}}:
-                                            </td>
-                                            <td class="p-1">
-                                                {{ single_price($total) }}
-                                            </td>
-                                        </tr>
+                                            }
+                                        @endphp
+                                        <td class="p-1 text-sm">
+                                            {{__('Last Month earnings')}}:
+                                        </td>
+                                        <td class="p-1">
+                                            {{ single_price($total) }}
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -555,9 +566,9 @@
                     </div>
                     <ul class="side-seller-menu">
                         {{-- @foreach (\App\Category::all() as $key => $category) --}}
-                            <li>
-                            {{-- <a href="{{ route('products.category', $category->slug) }}" class="text-truncate"> --}}
-                                <img class="cat-image lazyload" src="{{-- asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($category->icon) }}" width="13" alt="{{ __($category->name) }}">
+                    <li>
+{{-- <a href="{{ route('products.category', $category->slug) }}" class="text-truncate"> --}}
+                    <img class="cat-image lazyload" src="{{-- asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($category->icon) }}" width="13" alt="{{ __($category->name) }}">
                                 <span>{{ __($category->name) }}</span>
                             </a>
                         </li>
@@ -575,7 +586,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col-lg-3 col-10">
                         <div class="d-flex">
-    <div class="menu-toggle d-block d-lg-none mobile-menu-icon-box">
+                            <div class="menu-toggle d-block d-lg-none mobile-menu-icon-box">
                                 <!-- Navbar toggler  -->
                                 <a onclick="sideCatOpen(this)">
                                     <div class="hamburger-icon">
@@ -599,7 +610,7 @@
                                 @endif
                             </a>
 
-                            
+
 
                             @if(Route::currentRouteName() != 'home' && Route::currentRouteName() != 'categories.all')
                                 <div class="d-xl-block category-menu-icon-box d-none">
@@ -754,11 +765,11 @@
                                                                         </a>
                                                                     </li>
                                                                     @if (Auth::check())
-                                                                    <li class="px-1">
-                                                                        <a href="{{ route('checkout.shipping_info') }}" class="link link--style-1 text-capitalize btn btn-base-1 px-3 py-1 light-text">
-                                                                            <i class="la la-mail-forward"></i> {{__('Checkout')}}
-                                                                        </a>
-                                                                    </li>
+                                                                        <li class="px-1">
+                                                                            <a href="{{ route('checkout.shipping_info') }}" class="link link--style-1 text-capitalize btn btn-base-1 px-3 py-1 light-text">
+                                                                                <i class="la la-mail-forward"></i> {{__('Checkout')}}
+                                                                            </a>
+                                                                        </li>
                                                                     @endif
                                                                 </ul>
                                                             </div>
@@ -827,14 +838,14 @@
                 <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbar_main">
                     <ul class="navbar-nav">
                         @foreach (\App\Search::orderBy('count', 'desc')->get()->take(5) as $key => $search)
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('suggestion.search', $search->query) }}">{{ $search->query }}</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('suggestion.search', $search->query) }}">{{ $search->query }}</a>
                             </li>
                         @endforeach
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div> -->
+    </ul>
+</div>
+</div>
+</nav>
+</div> -->
 </div>
 

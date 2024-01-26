@@ -42,6 +42,14 @@ class CheckoutController extends Controller
 
             $request->session()->put('payment_type', 'cart_payment');
 
+            $refferred_by = 0;
+
+            $product_referral_code = \Illuminate\Support\Facades\Session::get('product_referral_code');
+            if($product_referral_code){
+                $refferred_by = User::where('referral_code',$request->product_referral_code)->value('id');
+            }
+
+
             if ($request->session()->get('order_id') != null) {
                 if ($request->payment_option == 'paypal') {
                     $paypal = new PaypalController;
@@ -140,11 +148,13 @@ class CheckoutController extends Controller
                 } elseif ($request->payment_option == 'wallet') {
                     $user = Auth::user();
                     $user->balance -= Order::findOrFail($request->session()->get('order_id'))->grand_total;
+
                     $user->save();
                     return $this->checkout_done($request->session()->get('order_id'), null);
                 } else {
                     $order = Order::findOrFail($request->session()->get('order_id'));
                     $order->manual_payment = 1;
+                    $order->referred_by = $refferred_by;
                     $order->save();
 
                     $request->session()->put('cart', collect([]));

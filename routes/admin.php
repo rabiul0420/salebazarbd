@@ -140,10 +140,12 @@ Route::post('/notice/send', 'NoticeController@send')->name('notices.send');
 	Route::get('/orders', 'OrderController@admin_orders')->name('orders.index.admin');
 	Route::get('/orders/{id}/show', 'OrderController@show')->name('orders.show');
 	Route::get('/sales/{id}/show', 'OrderController@sales_show')->name('sales.show');
+	
 	Route::get('/orders/{id}/edit', 'OrderController@edit')->name('orders.edit');
 	Route::get('/orders/destroy/{id}', 'OrderController@destroy')->name('orders.destroy_id');
 	Route::get('/orders/update-order-status', 'OrderController@updateOrderStatus')->name('orders.update-order-status');
 	Route::get('/sales', 'OrderController@sales')->name('sales.index');
+	Route::get('/sales-refferal', 'OrderController@sales_refferal')->name('sales.refferal');
 	Route::post('/order/status', 'OrderController@order_status_update')->name('order.status.update');
 
     Route::get('/cancelled-orders', 'OrderController@cancelledOrders')->name('orders.cancelled');
