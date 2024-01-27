@@ -399,7 +399,7 @@ class HomeController extends Controller
     public function product(Request $request, $slug)
     {
 
-        \Illuminate\Support\Facades\Session::put('product_referral_code', $request->product_referral_code);
+        
 
 
 
@@ -411,6 +411,9 @@ class HomeController extends Controller
                 Cookie::queue('referred_product_id', $detailedProduct->id, 43200);
             }
             $data['id'] = $detailedProduct->id;
+
+            \Illuminate\Support\Facades\Session::put('product_referral_code', $request->product_referral_code);
+            \Illuminate\Support\Facades\Session::put('rf_product_id',$detailedProduct->id);
 
             $cart = collect([$data]);
             $request->session()->put('recent_view', $cart);
