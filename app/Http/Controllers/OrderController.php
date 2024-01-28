@@ -22,6 +22,8 @@ use Mail;
 use App\Mail\InvoiceEmailManager;
 use CoreComponentRepository;
 use App\Models\Notification;
+use App\AffiliateUser;
+
 
 
 class OrderController extends Controller
@@ -254,18 +256,18 @@ class OrderController extends Controller
 
 
 
-
+       
+             $refferred_by =0;
             $product_referral_code = \Illuminate\Support\Facades\Session::get('product_referral_code');
+            $rf_product_id = \Illuminate\Support\Facades\Session::get('rf_product_id');
+
 
             if($product_referral_code){
                 $refferred_by = User::where('referral_code',$product_referral_code)->value('id');
                  $order->referred_by = $refferred_by;
             }
 
-            /*$user = User::find($refferred_by);
-
-        $user->balance += 20;
-        $user->save();*/
+            
 
 
 
@@ -353,6 +355,13 @@ class OrderController extends Controller
                 $order_detail->tax = $cartItem['tax'] * $cartItem['quantity'];
                 $order_detail->shipping_type = $cartItem['shipping_type'];
                 $order_detail->product_referral_code = $cartItem['product_referral_code'];
+
+
+                if($product->id == $rf_product_id && $refferred_by){
+                    $affileaduser = AffiliateUser::where('user_id', $refferred_by)->first();
+                    $affileaduser->balance += ($cartItem['price'] * $cartItem['quantity'])*5/100;
+                    $affileaduser->save();
+                }
 
                 // Create Notification
                 Notification::updateOrCreate(['order_id' => $order->id, 'seller_id' => $product->user_id], [

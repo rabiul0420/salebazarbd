@@ -33,8 +33,8 @@ class CheckoutController extends Controller
     }
 
     //check the selected payment gateway and redirect to that controller accordingly
-    public function checkout(Request $request)
-    {
+    public function checkout(Request $request) 
+    { 
         if ($request->payment_option != null) {
 
             $orderController = new OrderController;
@@ -48,6 +48,10 @@ class CheckoutController extends Controller
             if($product_referral_code){
                 $refferred_by = User::where('referral_code',$request->product_referral_code)->value('id');
             }
+
+      
+     
+
 
 
             if ($request->session()->get('order_id') != null) {
